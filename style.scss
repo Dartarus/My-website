@@ -18,7 +18,116 @@
 //     }
 // }
 
-// #toTop {
-//     position: absolute;
-//     right: 10%;
-// }
+#content{
+    margin-top: 90px;
+}
+
+
+#toTop {
+    position: absolute;
+    right: 10%;
+}
+
+// 關於我
+#about {
+    width: 100%;
+    height: 100vh;
+    text-align: center;
+
+    h2 {
+        font-size: 200px;
+        font-family: $font-family-main;
+        letter-spacing: 30px;
+        padding-left: 30px;
+        margin-top: 50px;
+
+        // 平板
+        @media screen and (max-width: $table) {
+            margin-top: 200px;
+        }
+        // 手機
+        @media screen and (max-width: $mobile) {
+            font-size: 64px;
+            letter-spacing: 10px;
+            padding-left: 10px;
+            margin-top: 100px;
+        }
+    }
+
+    p {
+        padding: 30px;
+        margin-bottom: 50px;
+        color:white;
+    }
+}
+
+// 標題
+.title {
+    font-size: $font-size-big;
+    padding: 35px;
+    text-align: center;
+}
+
+// 作品集
+#works {
+    height: 100vh;
+    background: $color-bg-gray;
+
+    // 平板
+    @media screen and (max-width: $table) {
+        height: auto;
+        padding-bottom: 100px;
+    }
+    // 手機
+    @media screen and (max-width: $mobile) {
+        height: auto;
+        padding-bottom: 100px;
+    }
+
+    #work-box {
+        width: 970px;
+        display: grid;
+        margin: 0 auto;
+        // repeat(數量，一格的寬度)
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: repeat(1, 200px);
+        // 格線間隙：上下 左右
+        grid-gap: 20px 35px;
+
+        // 平板
+        @media screen and (max-width: $table) {
+            width: 100%;
+            grid-template-columns: repeat(2, 1fr);
+            padding: 0 30px;
+        }
+        // 手機
+        @media screen and (max-width: $mobile) {
+            grid-template-columns: repeat(1, 1fr);
+        }
+
+        .work-box-small {
+            img {
+                display: block;
+                width: 100%;
+                height: 200px;
+                background: #eee;
+            }
+
+            h2 {
+                text-align: center;
+                // 變形：位移 Y 軸(單位)
+                transform: translateY(-30px);
+            }
+
+            span {
+                display: inline-block;
+                // border: 1.5px solid #000;
+                // border-radius: 30px;
+                padding: 3px 12px;
+                margin-top: 12px;
+                margin-left: 10px;
+                font-size: 12px;
+            }
+        }
+    }
+}

@@ -7,4 +7,13 @@
   font-family: 微軟正黑體;
   background-color: #000 !important;
 }
+
+#toTop {
+  position: absolute;
+  right: 10%;
+}
+
+#about p {
+  color: white;
+}
 /*# sourceMappingURL=style.css.map */

@@ -5,12 +5,21 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>My website</title>
-    <link rel="stylesheet" href="./style.css">
+
+    <!--  Slick CDN  -->
+    <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
+    <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css" />
+
+    <!-- AOS CDN -->
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
 
     <!-- Boostrap CDN CSS   -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css"
         integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+    <link rel="stylesheet" href="./style.css">
+
 </head>
 
 
@@ -18,7 +27,7 @@
 
     <!-- navbar -->
     <div class="container">
-        <nav class="navbar navbar-expand-lg navbar fixed-top navbar-dark">
+        <nav class="navbar navbar-expand-lg navbar fixed-top">
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown"
                 aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
@@ -50,9 +59,9 @@
         </nav>
 
 
-        <div id="about content">
+        <div id="content">
 
-            <a href="./index.html"><img src="./img/MyLogo.png" class="mx-auto d-block" alt="YBZ"></a>
+            <a href="./index.html"><img src="./img/MyLogo.png" class="mx-auto d-block mt-5" alt="YBZ"></a>
 
             <!--  輪播圖  -->
             <h1></h1>
@@ -67,39 +76,81 @@
                     <div class="carousel-item active">
                         <img src="./img/01.jpg" class="img-fluid d-block mx-auto w-80" alt="...">
                         <div class="carousel-caption d-none d-md-block">
-                            <h5>Model:Ashely / Location:Danshui</h5>
+                            <!-- <h5>Model:Ashely / Location:Danshui</h5> -->
                         </div>
                     </div>
                     <div class="carousel-item">
                         <img src="./img/02.jpg" class="img-fluid d-block mx-auto w-80" alt="...">
                         <div class="carousel-caption d-none d-md-block">
-                            <h5>Model:YongXin / Location:ZhongLi</h5>                            
+                            <!-- <h5>Model:YongXin / Location:ZhongLi</h5> -->
                         </div>
                     </div>
                     <div class="carousel-item">
                         <img src="./img/03.jpg" class="img-fluid d-block mx-auto w-80" alt="...">
                         <div class="carousel-caption d-none d-md-block">
-                            <h5>Model:Nini / Location:ZhongLi</h5>                            
+                            <!-- <h5>Model:Nini / Location:ZhongLi</h5> -->
                         </div>
                     </div>
                     <div class="carousel-item">
                         <img src="./img/04.jpg" class="img-fluid d-block mx-auto w-80" alt="...">
                         <div class="carousel-caption d-none d-md-block">
-                            <h5>Model:Nini / Location:ZhongLi</h5>
+                            <!-- <h5>Model:Nini / Location:ZhongLi</h5> -->
                         </div>
                     </div>
                 </div>
-                <a class="carousel-control-prev" href="#carouselExampleCaptions" role="button" data-slide="prev">
+                <!-- <a class="carousel-control-prev" href="#carouselExampleCaptions" role="button" data-slide="prev">
                     <span class="carousel-control-prev-icon" aria-hidden="true"></span>
                     <span class="sr-only">Previous</span>
                 </a>
                 <a class="carousel-control-next" href="#carouselExampleCaptions" role="button" data-slide="next">
                     <span class="carousel-control-next-icon" aria-hidden="true"></span>
                     <span class="sr-only">Next</span>
-                </a>
+                </a> -->
             </div>
 
+            <!-- 關於我 -->
+            <section id="about">
+                <h1 class="title" data-aos="slide-right" data-aos-duration="1000" data-aos-offset="200"
+                    data-aos-once="true">Portfolio
+                </h1>
+                <!-- data-aos 動畫 -->
+                <!-- data-aos-offset 位移：往上為正 -->
+                <!-- data-aos-delay 延遲 -->
+                <!-- data-aos-duration 持續時間：毫秒 0 - 3000 -->
+                <!-- data-aos-easing 緩動 -->
+                <!-- data-aos-mirror 雙向 true 允許雙向 false 不允許 -->
+                <!-- data-aos-once 播放一次 true 一次 false 不限次數 -->
 
+                <img src="./img/01.jpg" alt="">
+                <p>一個菜鳥攝影/網頁前端設計師/平面設計師/ACG中二病患者。</p>
+            </section>
+
+            <!-- 作品集 -->
+            <section id="works">
+                <h1 class="title" data-aos="slide-right" data-aos-duration="1000" data-aos-offset="200"
+                    data-aos-once="true">作品集
+                </h1>
+                <div id="work-box">
+                    <div class="work-box-small" data-aos="zoom-in" data-aos-offset="350" data-aos-duration="1000"
+                        data-aos-once="true">
+                        <img src="./img/04.jpg" alt="">
+                        <span class="border rounded-pill">Design</span>
+                        <h2>作品名稱</h2>
+                    </div>
+                    <div class="work-box-small" data-aos="zoom-in" data-aos-offset="350" data-aos-duration="1000"
+                        data-aos-once="true" data-aos-delay="200">
+                        <img src="./img/02.jpg" alt="">
+                        <span class="border rounded-pill">Photography</span>
+                        <h2>作品名稱</h2>
+                    </div>
+                    <div class="work-box-small" data-aos="zoom-in" data-aos-offset="350" data-aos-duration="1000"
+                        data-aos-once="true" data-aos-delay="400">
+                        <img src="./img/03.jpg" alt="">
+                        <span class="border rounded-pill">Film</span>
+                        <h2>作品名稱</h2>
+                    </div>
+                </div>
+            </section>
 
             <footer>
 
@@ -125,6 +176,21 @@
             <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
             <!-- 前往元素 js -->
             <script src="./goTo.js"></script>
+            <!--  Slick CDN  -->
+            <script type="text/javascript"
+                src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+            <script>
+                $("#banner").slick({
+                    arrows: false,
+                    dots: true,
+                    dotsClass: "slick-dots dots"
+                });
+            </script>
+            <!-- AOS CDN -->
+            <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+            <script>
+                AOS.init();
+            </script>
 
 </body>
 
